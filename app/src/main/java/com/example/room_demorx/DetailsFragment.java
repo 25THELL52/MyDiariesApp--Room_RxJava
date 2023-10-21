@@ -17,6 +17,7 @@ import com.example.room_demorx.Model.Diary;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.reactivex.CompletableObserver;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
@@ -55,10 +56,11 @@ public class DetailsFragment extends Fragment {
         saveDiary.setOnClickListener(view1 -> {
             if(!updateState){db.getdiaryDAO().insert(new Diary(diarytitle.getText().toString(),"02/02/2023",diarybody.getText().toString()))
                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
                    .subscribe(new CompletableObserver() {
                        @Override
                        public void onSubscribe(Disposable d) {
-
+                           ((MainActivity)getActivity()).onBackPressed();
                        }
 
                        @Override
@@ -76,6 +78,7 @@ public class DetailsFragment extends Fragment {
                     .subscribe(new CompletableObserver() {
                         @Override
                         public void onSubscribe(Disposable d) {
+                            ((MainActivity)getActivity()).onBackPressed();
 
                         }
 

@@ -6,13 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/design_default_color_background"
+    android:backgroundTint="@color/cardview_light_background"
     tools:layout_editor_absoluteX="66dp"
-    tools:layout_editor_absoluteY="33dp">
+    tools:layout_editor_absoluteY="33dp"
+    android:layout_marginTop="4dp"
+
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/rv_item_bg"
+
+        >
 
         <TextView
             android:id="@+id/diarytitle"

@@ -31,11 +31,12 @@
         <EditText
             android:id="@+id/diarybodydetailsfragmentedt"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+
             android:backgroundTint="@color/white"
-            android:hint="Enter diary" />
+            android:hint="Express Yourself" />
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

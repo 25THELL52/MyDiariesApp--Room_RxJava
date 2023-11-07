@@ -35,6 +35,10 @@ public interface DiaryDAO {
     Completable  delete(String titlenum1);
 
 
+    @Delete
+    Completable  delete(Diary diary);
+    @Query("DELETE FROM Diary WHERE id= :id ")
+    Completable  delete(int id);
 
 @Query("UPDATE Diary SET Body=:body WHERE id= :id")
     Completable updateDiary(Integer id,String body);

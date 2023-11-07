@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -37,6 +38,7 @@ public class MainFragment extends Fragment  {
     List<Diary> diaries;
     FloatingActionButton newDiary;
     DiaryDatabase db;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -164,6 +166,7 @@ public class MainFragment extends Fragment  {
 
 
     }
+
 
 
     // need to deal with :

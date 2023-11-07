@@ -60,11 +60,11 @@ public class DetailsFragment extends Fragment {
                    .subscribe(new CompletableObserver() {
                        @Override
                        public void onSubscribe(Disposable d) {
-                           ((MainActivity)getActivity()).onBackPressed();
                        }
 
                        @Override
                        public void onComplete() {
+                           ((MainActivity)getActivity()).onBackPressed();
 
                        }
 
@@ -78,12 +78,13 @@ public class DetailsFragment extends Fragment {
                     .subscribe(new CompletableObserver() {
                         @Override
                         public void onSubscribe(Disposable d) {
-                            ((MainActivity)getActivity()).onBackPressed();
+
 
                         }
 
                         @Override
                         public void onComplete() {
+                            ((MainActivity)getActivity()).onBackPressed();
 
                         }
 

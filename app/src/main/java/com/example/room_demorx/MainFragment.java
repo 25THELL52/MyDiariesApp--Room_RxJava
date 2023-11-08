@@ -110,8 +110,7 @@ public class MainFragment extends Fragment  {
 
             // create object of PopupMenu and pass context and view where we want
             // to show the popup menu
-            PopupMenu popupMenu = new PopupMenu(getContext() , recyclerView.findViewHolderForAdapterPosition(position).itemView
-            );
+            PopupMenu popupMenu = new PopupMenu(getContext() , recyclerView.findViewHolderForAdapterPosition(position).itemView);
             // add the menu
             popupMenu.inflate(R.menu.recyclerview_item_context_menu);
             // implement on menu item click Listener

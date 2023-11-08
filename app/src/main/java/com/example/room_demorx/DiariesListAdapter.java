@@ -74,6 +74,8 @@ public class DiariesListAdapter extends RecyclerView.Adapter<DiariesListAdapter.
                 optionsMenuClickListener.onOptionsMenuClicked(position);
                 currentPosition = holder.getAbsoluteAdapterPosition();
                 Log.e("message", "long Clicked");
+                Log.e("message", "currentPosition: " + position);
+
                 return true;
             }
 
@@ -91,7 +93,7 @@ public class DiariesListAdapter extends RecyclerView.Adapter<DiariesListAdapter.
         super.onViewRecycled(holder);
     }
 
-    public static class DiariesListViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
+    public static class DiariesListViewHolder extends RecyclerView.ViewHolder  {
 
         TextView title,date,body;
         public DiariesListViewHolder(@NonNull View itemView) {
@@ -100,16 +102,10 @@ public class DiariesListAdapter extends RecyclerView.Adapter<DiariesListAdapter.
 
             title= (TextView)itemView.findViewById(R.id.diarytitle);
             date= (TextView)itemView.findViewById(R.id.date);
-            itemView.setOnCreateContextMenuListener(this);
 
 
         }
 
-        @Override
-        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-            contextMenu.add(0, view.getId(), 0, "Edit");
-            contextMenu.add(0, view.getId(), 0, "Delete");
 
-        }
     }
 }

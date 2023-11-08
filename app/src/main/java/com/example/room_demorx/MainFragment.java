@@ -110,7 +110,8 @@ public class MainFragment extends Fragment  {
 
             // create object of PopupMenu and pass context and view where we want
             // to show the popup menu
-            PopupMenu popupMenu = new PopupMenu(getContext() , view.findViewById(R.id.itemCardView));
+            PopupMenu popupMenu = new PopupMenu(getContext() , recyclerView.findViewHolderForAdapterPosition(position).itemView
+            );
             // add the menu
             popupMenu.inflate(R.menu.recyclerview_item_context_menu);
             // implement on menu item click Listener
@@ -118,7 +119,7 @@ public class MainFragment extends Fragment  {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
                     CharSequence title = item.getTitle();
-                    if ("Edit".contentEquals(title)) {// here are the logic to delete an item from the list
+                    if ("Edit".contentEquals(title)) {
                         Bundle bundle = new Bundle();
                         bundle.putString("id", String.valueOf(diaries.get(diariesListAdapter.currentPosition).id));
                         bundle.putString("title", diaries.get(diariesListAdapter.currentPosition).title);

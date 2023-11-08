@@ -9,8 +9,10 @@
     <EditText
         android:id="@+id/diarytitledetailsfragmentedt"
         android:layout_width="match_parent"
+        android:maxLines="1"
         android:layout_height="53dp"
         android:layout_marginTop="56dp"
+        android:inputType="text"
         android:hint="Enter title"
         android:padding="8dp"
         android:textColor="#120000"
@@ -50,6 +52,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:tooltipText="save diary"
+
         app:layout_constraintEnd_toEndOf="parent" />
 
 

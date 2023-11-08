@@ -75,6 +75,7 @@ public class DetailsFragment extends Fragment {
                    });}
             else {db.getdiaryDAO().updateDiary(Integer.parseInt(getArguments().getString("id")),diarybody.getText().toString())
                     .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new CompletableObserver() {
                         @Override
                         public void onSubscribe(Disposable d) {
